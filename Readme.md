@@ -38,6 +38,10 @@
 - Use coroutines
 - Manage the loading states accordingly
 
+## Instructions to run
+
+Fork the repo, in the forked repo, create a new branch to work on. Create a new project using Android Studio and do your work on that branch of the forked repo. When done, open a pull request from your branch to the master branch of the forked repo so that the end result can be reviewed.
+
 ## Evaluation
 
 Our evaluation will be conducted over the state of the forked repository in which the challenge is done.
