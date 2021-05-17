@@ -26,6 +26,7 @@
 - Initial screen should show the list of trending movies in the week and highlight the top spot
 - Initial screen should allow the user to search any movie by name even if not in the trending list, choose an appropriate endpoint
 - Details screen should show the details about the current movie and a list containing the other movies trending
+- Clicking on movie cards should open the details screen
 - The stack of screens on the app must not scale indefinetely
 - The app should follow the design provided in figma
 - Use proper MVVM structures
