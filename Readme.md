@@ -1,50 +1,42 @@
-# Jungle Devs - Android Challenge The Movie DB
+# Movie API
+### Portrait
+![](Portrait.png)
+### Landscape
+![](Landscape.png)
 
-## Description
+## About this project
 
-**Challenge goal**: The purpose of this challenge is to give a general idea of how to create a simple app using a variety of well accepted practices and technologies in the market. You’ll be implementing a simplified version of a movie preview app using The Movie DB API. The concepts that you’re gonna apply are:
+An Android App to list movies
 
-- MVVM;
-- RecyclerView;
-- LiveData
-- API calls;
-- Error handling;
-- Loading states;
+## User functionalities
 
-**Target level**: This is an all around challenge that covers both juniors and experienced devs based on the depth of how the concepts were applied.
+- Display movies from [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)
 
-**Final accomplishment**: By the end of this challenge you'll have a working development app.
+## Getting Started
 
-## Resources
+### Prerequisites
 
-**Design**: [Figma](https://www.figma.com/file/gRw33pnPCjbRAE8DyhOsZm/Android-%E2%80%93-Challenge-2?node-id=0%3A1)
+To run this project in the development mode, you'll need to have a basic environment to run an Android App, that can be found [here](https://developer.android.com/studio).
+After that you can run the app in an Android Emulator, [here is a guide for configure it](https://developer.android.com/studio/run/emulator#install), or with a physical device with developer mode on, [here is a guide for it](https://developer.android.com/studio/debug/dev-options).
 
-## Acceptance criteria
+### Running
 
-- Clear instructions on how to run the application
-- Implement the screens using The Movie DB trending endpoint (Create an account and generate an API access key for development to be able to access it)
-- Initial screen should show the list of trending movies in the week and highlight the top spot
-- Initial screen should allow the user to search any movie by name even if not in the trending list, choose an appropriate endpoint
-- Details screen should show the details about the current movie and a list containing the other movies trending
-- Clicking on movie cards should open the details screen
-- The stack of screens on the app must not scale indefinetely
-- The app should follow the design provided in figma
-- Use proper MVVM structures
+Click in this button. 
 
-## Desirables
+![](RunApp.png)
 
-- Use RecyclerView
-- Use livedata
-- Implement error handling and reload options
-- Use coroutines
-- Manage the loading states accordingly
+### Running Tests
 
-## Instructions to run
+No device requiered.
 
-Fork the repo, in the forked repo, create a new branch to work on. Create a new project using Android Studio and do your work on that branch of the forked repo. When done, open a pull request from your branch to the master branch of the forked repo so that the end result can be reviewed.
+![](RunTests.png)
 
-## Evaluation
+## Built With
+- [Android SDK](https://developer.android.com/) - Create an Android App
+- [Kotlin](https://developer.android.com/kotlin) - Develop Android apps with Kotlin
+- [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
+- [Koin](https://insert-koin.io/) - Dependency injection
+- [MockK](https://mockk.io/) - Mock library for tests
+## License
 
-Our evaluation will be conducted over the state of the forked repository in which the challenge is done.
-
-commit test
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/diegoleonds/ScoreApp/blob/master/LICENSE) file for details
