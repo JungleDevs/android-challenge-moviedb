@@ -37,6 +37,3 @@ No device requiered.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
 - [Koin](https://insert-koin.io/) - Dependency injection
 - [MockK](https://mockk.io/) - Mock library for tests
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/diegoleonds/ScoreApp/blob/master/LICENSE) file for details
