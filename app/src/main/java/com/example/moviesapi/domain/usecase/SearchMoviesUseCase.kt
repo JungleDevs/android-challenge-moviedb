@@ -5,6 +5,9 @@ import com.example.moviesapi.data.repository.MovieRepositoryImpl
 import com.example.moviesapi.domain.transform.MovieTransform
 import com.example.moviesapi.ui.model.Movie
 
+/**
+ * Search a movie from the api
+ */
 class SearchMoviesUseCase(
     val repository: MovieRepositoryImpl,
     val transform: MovieTransform

@@ -7,6 +7,9 @@ import kotlin.collections.ArrayList
 import com.example.moviesapi.ui.model.Movie as ViewMovie
 import com.example.moviesapi.data.model.Movie as ModelMovie
 
+/**
+ * Transform a movie from data layer into one from ui layer
+ */
 class MovieTransform {
     fun transformModelMovieIntoViewMovie(modelMovie: ModelMovie): ViewMovie {
         return ViewMovie(

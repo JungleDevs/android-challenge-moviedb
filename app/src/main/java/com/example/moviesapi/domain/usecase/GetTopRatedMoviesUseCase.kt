@@ -5,6 +5,9 @@ import com.example.moviesapi.data.repository.MovieRepositoryImpl
 import com.example.moviesapi.domain.transform.MovieTransform
 import com.example.moviesapi.ui.model.Movie
 
+/**
+ * get top rated movies, sorting them, and set the top one as it
+ */
 class GetTopRatedMoviesUseCase(
     val repository: MovieRepositoryImpl,
     val transform: MovieTransform

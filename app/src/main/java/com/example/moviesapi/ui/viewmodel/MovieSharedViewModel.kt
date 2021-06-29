@@ -8,6 +8,10 @@ import com.example.moviesapi.domain.usecase.GetTopRatedMoviesUseCase
 import com.example.moviesapi.ui.model.Movie
 import org.koin.java.KoinJavaComponent.inject
 
+/**
+ * A shared viewmodel to store data that is used in more than one fragment.
+ * Call it by activityViewModel scope
+ */
 class MovieSharedViewModel() : ViewModel() {
     private val getTopRatedMoviesUseCase by inject(GetTopRatedMoviesUseCase::class.java)
 

@@ -25,6 +25,9 @@ import com.example.moviesapi.ui.viewmodel.MovieInfoViewModel
 import com.example.moviesapi.ui.viewmodel.MovieSharedViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Show movie infos and a top rated list
+ */
 class MovieInfoFragment : Fragment() {
     val activityViewModel: MovieSharedViewModel by activityViewModels()
     val viewModel: MovieInfoViewModel by viewModel()
@@ -86,6 +89,9 @@ class MovieInfoFragment : Fragment() {
         }
     }
 
+    /**
+     * get reference for the views
+     */
     private fun inflateViews(view: View) {
         movieInfoBackIcon = view.findViewById(R.id.movieInfoBackIcon)
         movieInfoImg = view.findViewById(R.id.movieInfoImg)
@@ -99,6 +105,9 @@ class MovieInfoFragment : Fragment() {
         movieInfoRv = view.findViewById(R.id.movieInfoRv)
     }
 
+    /**
+     * populate the fields
+     */
     private fun populateFields(view: View){
         val imgLoader = ImgLoader(Glide.with(view.context))
         imgLoader.loadImage(
@@ -135,6 +144,9 @@ class MovieInfoFragment : Fragment() {
         movieInfoRv.layoutManager = LinearLayoutManager(context)
     }
 
+    /**
+     * observe movies from viewmodel and update the view with it and handle errors
+     */
     private fun observeViewModelMovies() {
         viewModel.movies.observe(viewLifecycleOwner, Observer {
             it?.let {
@@ -148,6 +160,9 @@ class MovieInfoFragment : Fragment() {
         })
     }
 
+    /**
+     * set default back action to the click
+     */
     private fun setBackBtnClick(view: View) {
         movieInfoBackIcon.setOnClickListener {
             activity?.let {

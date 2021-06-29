@@ -6,6 +6,9 @@ import retrofit2.HttpException
 import java.io.IOException
 import java.net.HttpURLConnection
 
+/**
+ * Class to convert a throwable into an ErrorEntity
+ */
 class GeneralErrorHandlerImpl() : ErrorHandler {
 
     override fun getError(throwable: Throwable): ErrorEntity {

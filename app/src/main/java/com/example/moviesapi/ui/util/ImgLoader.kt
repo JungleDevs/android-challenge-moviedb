@@ -7,6 +7,9 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.moviesapi.R
 import com.example.moviesapi.data.api.Api
 
+/**
+ * Class to load images into views
+ */
 class ImgLoader(
     private val glide: RequestManager,
     private val cache: DiskCacheStrategy = DiskCacheStrategy.NONE

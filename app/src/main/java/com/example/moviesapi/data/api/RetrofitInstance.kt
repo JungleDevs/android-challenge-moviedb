@@ -3,6 +3,9 @@ package com.example.moviesapi.data.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * Object to get the api
+ */
 object RetrofitInstance {
     private val BASE_URL = "https://api.themoviedb.org/3/"
 

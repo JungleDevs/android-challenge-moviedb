@@ -10,6 +10,12 @@ class MovieInfoViewModel(): ViewModel() {
     val movies: LiveData<ArrayList<Movie>>
         get() = _movies
 
+    /**
+     * set _movies value as the list without the movie
+     *
+     * @param movie desired to cut of from the list
+     * @param movies movies list
+     */
     fun getMoviesCopyWithoutAnItem(movie: Movie, movies: ArrayList<Movie>) {
         val moviesCopy = ArrayList<Movie>()
 

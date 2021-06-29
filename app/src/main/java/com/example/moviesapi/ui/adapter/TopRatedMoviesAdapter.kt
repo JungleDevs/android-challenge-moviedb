@@ -12,11 +12,21 @@ import com.example.moviesapi.ui.model.Movie
 import com.example.moviesapi.ui.util.ImgLoader
 import com.google.android.material.card.MaterialCardView
 
+/**
+ * Adapter for top rated recyclerview
+ *
+ * @param click interface that defines simple click action on the list items
+ * @param imgLoader load the list items images
+ */
 class TopRatedMoviesAdapter(
     val click: AdapterClick<Movie>,
     val imgLoader: ImgLoader
 ): RecyclerView.Adapter<TopRatedMoviesAdapter.TopMoviesViewHolder>() {
     var moviesSearchList = ArrayList<Movie>()
+
+    /**
+     * adapter data source, the list will show what is in there
+     */
     var movies = ArrayList<Movie>()
 
     // Create new views (invoked by the layout manager)
@@ -45,6 +55,9 @@ class TopRatedMoviesAdapter(
 
         viewHolder.cardView.setOnClickListener { click.simpleClick(movie) }
 
+        /**
+         * change the background when the current movie is top rated
+         */
         if (movies[position].topRated) {
             viewHolder.topIcon.visibility = View.VISIBLE
             viewHolder.topRatedTxt.visibility = View.VISIBLE
@@ -66,6 +79,9 @@ class TopRatedMoviesAdapter(
         }
     }
 
+    /**
+     * update the lists and call notifyDataSetChanged() to update the views
+     */
     fun updateData(list: List<Movie>) {
         movies = ArrayList<Movie>(list)
         moviesSearchList = ArrayList<Movie>(list)
@@ -78,6 +94,9 @@ class TopRatedMoviesAdapter(
         return eventNameFilter
     }
 
+    /**
+     * search in the list
+     */
     private val eventNameFilter = object : Filter() {
         override fun performFiltering(constraint: CharSequence?): FilterResults {
             val filteredList: ArrayList<Movie> = ArrayList()

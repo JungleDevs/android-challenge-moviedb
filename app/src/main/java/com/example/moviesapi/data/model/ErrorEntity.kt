@@ -2,6 +2,10 @@ package com.example.moviesapi.data.model
 
 import com.example.moviesapi.R
 
+/**
+ * Used on repository to handle http errors and to expose them for other layers to
+ * be able to do this too
+ */
 sealed class ErrorEntity(val messageResource: Int) {
     object Network : ErrorEntity(R.string.network_error)
 

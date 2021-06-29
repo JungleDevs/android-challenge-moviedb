@@ -29,6 +29,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.android.viewmodel.ext.android.viewModel
 
+/**
+ * Show a top rated list or a message for http errors with a try again button
+ */
 class MovieListFragment : Fragment() {
 
     val activityViewModel: MovieSharedViewModel by activityViewModels()
@@ -69,13 +72,16 @@ class MovieListFragment : Fragment() {
         errorIncludeView = view.findViewById(R.id.moviesErrorInclude)
     }
 
+    /**
+     * init recyclerview adapter and set a click action to it, this action directs the user
+     * to MovieInfoFragment passing the clicked movie by safe args
+     */
     private fun initAdapter(view: View) {
         adapter = TopRatedMoviesAdapter(
             object : AdapterClick<Movie> {
                 override fun simpleClick(movie: Movie) {
                     val action = MovieListFragmentDirections
                         .actionMovieListFragmentToMovieInfoFragment(movie)
-
                     Navigation.findNavController(view).navigate(action)
                 }
             }, ImgLoader(
@@ -90,6 +96,10 @@ class MovieListFragment : Fragment() {
         moviesList.layoutManager = LinearLayoutManager(context)
     }
 
+    /**
+     * observe viewmodel activity movies, updating the views: showing an error
+     * message with a try again button or populating the list in case of success
+     */
     private fun observeViewModelMovies() {
         activityViewModel.movies.observe(viewLifecycleOwner, Observer {
             it?.let {
@@ -149,6 +159,9 @@ class MovieListFragment : Fragment() {
             view.visibility = View.VISIBLE
     }
 
+    /**
+     * call the filter for search from recyclerview adapter
+     */
     private fun setSearchIconClick() {
         searchIcon.setOnClickListener {
             adapter.getFilter().filter(searchEditTxt.text)

@@ -14,6 +14,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/**
+ * A splash screen fragment, it loads data and when finish it move on to MovieListFragment
+ */
 class SplashScreenFragment: Fragment() {
 
     val activityViewModel: MovieSharedViewModel by activityViewModels()

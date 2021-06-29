@@ -2,7 +2,10 @@ package com.example.moviesapi.data.model
 
 import java.time.LocalDate
 import kotlin.collections.ArrayList
-
+/**
+ * Just a wrapper for api calls, in domain layer is transformed in a model from view layer,
+ * like a POJO
+ */
 data class Movie(
         val id: Long,
         val genres: ArrayList<Genre>,

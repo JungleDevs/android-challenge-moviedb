@@ -3,6 +3,10 @@ package com.example.moviesapi.ui.model
 import android.os.Parcel
 import android.os.Parcelable
 
+/**
+ * A model class, like a POJO, to avoid formatting data in different places,
+ * domain package has a transform for this one
+ */
 data class Movie(
     val id: Long,
     val title: String,
